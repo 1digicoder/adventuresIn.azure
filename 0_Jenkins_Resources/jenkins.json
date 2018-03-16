@@ -1,6 +1,12 @@
 {
     "jenkins": {
-        "resource_group" : "adventuresInAzure-dev-ue-vm01-rg",
-        "location" : "eastus"
+        "resource_group" : {
+            "name" : "adventuresInAzure-dev-ue-rg",
+            "location" : "eastus"
+        },
+        "vm" : {
+            "name" : "adventuresInAzure-dev-ue-vm01",
+            "size": "Standard_B1s"
+        }
     }
 }
