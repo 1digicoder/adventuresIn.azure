@@ -14,6 +14,15 @@ rg_name=`cat ${__dir}/jenkins.json | jq -r '.jenkins.resource_group.name'`
 rg_location=`cat ${__dir}/jenkins.json | jq -r '.jenkins.resource_group.location'`
 vm_name=`cat ${__dir}/jenkins.json | jq -r '.jenkins.vm.name'`
 vm_size=`cat ${__dir}/jenkins.json | jq -r '.jenkins.vm.size'`
+key_vault=`cat ${__dir}/jenkins.json | jq -r '.security.keyVault.name'`
+cert_name=`cat ${__dir}/jenkins.json | jq -r '.security.certificate.name'`
+
+secret=$(az keyvault secret list-versions \
+    --vault-name ${key_vault} \
+    --name ${cert_name} \
+    --query "[?attributes.enabled].id" --output tsv)
+
+vm_secret=$(az vm format-secret --secret "$secret")
 
 az vm create --resource-group ${rg_name} \
     --name ${vm_name} \
@@ -21,7 +30,9 @@ az vm create --resource-group ${rg_name} \
     --image UbuntuLTS \
     --admin-username azureuser \
     --generate-ssh-keys \
-    --custom-data cloud-init-jenkins.txt
+    --custom-data cloud-init-jenkins.txt \
+    --secrets "${vm_secret}"
 
 az vm open-port --resource-group ${rg_name} --name ${vm_name} --port 8080 --priority 1001
-az vm open-port --resource-group ${rg_name} --name ${vm_name} --port 1337 --priority 1002
+az vm open-port --resource-group ${rg_name} --name ${vm_name} --port 8443 --priority 1002
+az vm open-port --resource-group ${rg_name} --name ${vm_name} --port 1337 --priority 1003

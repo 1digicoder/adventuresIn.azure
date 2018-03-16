@@ -1,14 +1,4 @@
 {
-    "jenkins": {
-        "resource_group" : {
-            "name" : "adventuresInAzure-dev-ue-build-rg",
-            "location" : "eastus"
-        },
-        "vm" : {
-            "name" : "adventuresInAzure-dev-ue-build-vm01",
-            "size": "Standard_B1s"
-        }
-    },
     "security" : {
         "resource_group" : {
             "name" : "adventuresInAzure-dev-ue-security-rg",
