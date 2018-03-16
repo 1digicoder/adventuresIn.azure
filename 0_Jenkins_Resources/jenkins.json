@@ -1,0 +1,6 @@
+{
+    "jenkins": {
+        "resource_group" : "adventuresInAzure-dev-ue-vm01-rg",
+        "location" : "eastus"
+    }
+}
