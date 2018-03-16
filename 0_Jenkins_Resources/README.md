@@ -1,21 +1,23 @@
 # Adventures In Azure
-
 ## Working through various scenarios and utilities to do fun things in Azure
 
 
-* OSX Utilities
+# OSX Utilities
 
-jq - json parser
+## jq
 
-$ brew install jq
+> $ brew install jq
 
-Azure CLI 2.0
+## Azure CLI 2.0
 
 $ brew update && brew install azure-cli
 
 
-* Linux utilities (Debian/Ubuntu)
+# Linux utilities (Debian/Ubuntu)
 
-$ sudo apt-get install jq
+> $ sudo apt-get install jq
 
-* Using 
+# Creating your initial resources
+
+
+
