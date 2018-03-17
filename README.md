@@ -7,7 +7,7 @@ Playground for CI/CD reference architecture for Azure
 > can’t get his email and it’s the end of the world. In the new way, servers 
 > are numbered, like cattle in a herd. For example, www001 to www100. When 
 > one server goes down, it’s taken out back, shot, and replaced on the line.
-> <cite>Randy Bias</cite>
+>  *- Randy Bias*
 
 The goal here is to both dogfood and documenting my experience with doing things in a sane manner.
 
