@@ -31,12 +31,15 @@ Will be looking at patterns around using Azure with the following goals in mind:
 ## Status
 
 ```
-| Topic                |   Pet  | Cattle |
-|----------------------|--------|--------| 
-|Create Resource Groups|        |        |
-|Create Virtual Machine|    /   |    /   | 
-|Create Key Vault      |        |        |
-|Setup Jenkins         |    X   |    WIP |
+| Topic                   |   Pet  | Cattle |
+|-------------------------|--------|--------| 
+|Create Resource Groups   |        |        |
+|Create Virtual Machine   |    /   |    /   |
+|Create Container Registry|        |    X   |
+|Create K8S Cluster       |        |    X   |
+|Deployment to K8S        |        |        |
+|Create Key Vault         |        |        |
+|Setup Jenkins            |    X   |   WIP  |
 
 Legend:
   (blank) - Unknown
