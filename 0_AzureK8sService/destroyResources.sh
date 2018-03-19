@@ -8,6 +8,5 @@ set -o nounset
 __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 rg_name=`cat ${__dir}/ak8sService.json | jq -r '.k8s.resource_group.name'`
-rg_location=`cat ${__dir}/ak8sService.json | jq -r '.k8s.resource_group.location'`
 
-az group delete -y -n ${rg_name}
+az group delete -y -n ${rg_name} --no-wait
