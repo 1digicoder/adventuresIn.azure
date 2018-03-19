@@ -1,0 +1,11 @@
+{
+    "k8s": {
+        "resource_group" : {
+            "name" : "adventuresInAzure-dev-ue-k8s-rg",
+            "location" : "eastus"
+        },
+        "name": "adventuresInAzure-dev-ue-k8s-cluster",
+        "node_count": 1,
+        "node_vm_size": "B1ms"
+    }
+}
