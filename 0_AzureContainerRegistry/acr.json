@@ -1,0 +1,10 @@
+{
+    "acr": {
+        "resource_group" : {
+            "name" : "adventuresInAzure-dev-ue-acr-rg",
+            "location" : "eastus"
+        },
+        "sku": "Basic",
+        "name": "aiaDevACR01"
+    }
+}
