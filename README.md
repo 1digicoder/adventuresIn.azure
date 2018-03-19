@@ -33,12 +33,12 @@ Will be looking at patterns around using Azure with the following goals in mind:
 ```
 | Topic                   |   Pet  | Cattle |
 |-------------------------|--------|--------| 
-|Create Resource Groups   |        |        |
+|Create Resource Groups   |        |    /   |
 |Create Virtual Machine   |    /   |    /   |
 |Create Container Registry|        |    X   |
 |Create K8S Cluster       |        |    X   |
-|Deployment to K8S        |        |        |
-|Create Key Vault         |        |        |
+|Deployment to K8S        |        |    /   |
+|Create Key Vault         |        |    X   |
 |Setup Jenkins            |    X   |   WIP  |
 
 Legend:
