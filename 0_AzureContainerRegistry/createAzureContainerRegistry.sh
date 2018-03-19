@@ -20,3 +20,7 @@ az acr create \
     --sku ${acr_sku}
 
 az acr login --name ${acr_name}
+
+az acr list --resource-group ${rg_name} \
+    --query "[].{acrLoginServer:loginServer}" \
+    --output table
